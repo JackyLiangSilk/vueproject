@@ -4,13 +4,13 @@
 		app
 		dark 
 		fixed
-		color="#183B59">
+		color="primary">
 			<v-app-bar-nav-icon @click="menu = !menu"></v-app-bar-nav-icon>
 			<v-toolbar-title>
-				<img :src="logo" width="30px" class="d-block">
+				<img :src="logo" height="30px" class="d-block">
 			</v-toolbar-title>
 		</v-app-bar>
-		<v-navigation-drawer app v-model="menu" color="#183B59">
+		<v-navigation-drawer app v-model="menu" color="primary">
 			<div class="header-link" v-for="(link, index) in headerLinks" :key="index">
 				<router-link 
 				class="pa-4 d-block white--text text-decoration-none text-uppercase font-weight-bold" 
