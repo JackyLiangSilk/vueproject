@@ -11,11 +11,18 @@
 			</v-toolbar-title>
 		</v-app-bar>
 		<v-navigation-drawer app v-model="menu" color="primary">
-			<div class="header-link" v-for="(link, index) in headerLinks" :key="index">
+			<!-- <div class="header-link" v-for="(link, index) in headerLinks" :key="index">
 				<router-link 
 				class="pa-4 d-block white--text text-decoration-none text-uppercase font-weight-bold" 
-				:to="link.url">{{link.title}}</router-link>
-			</div>
+				:to="link.route">{{link.title}}</router-link>
+			</div> -->
+			<v-list>
+				<v-list-item v-for="link in headerLinks" :key="link.route" router :to="link.route">
+					<v-list-item-content>
+						<v-list-item-title class="pa-4 d-block white--text text-decoration-none text-uppercase font-weight-bold">{{link.title}}</v-list-item-title>
+					</v-list-item-content>
+				</v-list-item>
+			</v-list>
 		</v-navigation-drawer>
 	</div>
 </template>
@@ -28,11 +35,11 @@
 				menu: false,
 				headerLinks: [
 					{
-						url: '/',
+						route: '/',
 						title: 'Home'
 					},
 					{
-						url: '/about',
+						route: '/about',
 						title: 'About'
 					}
 				]
