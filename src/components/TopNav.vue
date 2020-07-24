@@ -6,7 +6,9 @@
 		fixed>
 			<v-app-bar-nav-icon @click="menu = !menu"></v-app-bar-nav-icon>
 			<v-toolbar-title>
-				<img :src="logo" height="30px" class="d-block">
+				<v-list-item router :to="headerLinks[0].route">
+					<img :src="logo" :alt="logoAlt" height="30px" class="d-block" >
+				</v-list-item>
 			</v-toolbar-title>
 		</v-app-bar>
 		<v-navigation-drawer app v-model="menu" class="primary">
@@ -16,10 +18,12 @@
 				:to="link.route">{{link.title}}</router-link>
 			</div> -->
 			<v-list>
-				<v-list-item v-for="link in headerLinks" :key="link.route" router :to="link.route">
-					<v-list-item-content>
-						<v-list-item-title class="pa-4 d-block white--text text-decoration-none text-uppercase font-weight-bold">{{link.title}}</v-list-item-title>
-					</v-list-item-content>
+				<v-list-item v-for="link in headerLinks" :key="link.route" router :to="link.route" >
+					<v-hover v-slot:default="{hover}" close-delay="200">
+						<v-list-item-content :class="{'on-hover' : hover}">
+							<v-list-item-title class="pa-4 d-block white--text text-decoration-none text-uppercase font-weight-bold">{{link.title}}</v-list-item-title>
+						</v-list-item-content>
+					</v-hover>
 				</v-list-item>
 			</v-list>
 		</v-navigation-drawer>
@@ -31,6 +35,7 @@
 		data(){
 			return{
 				logo: require('../assets/logo-hello.png'),
+				logoAlt: 'Welcome to HelloWorld',
 				menu: false,
 				headerLinks: [
 					{
