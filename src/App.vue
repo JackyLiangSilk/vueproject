@@ -11,7 +11,6 @@
 import TopNav from '@/components/TopNav'
 export default {
   name: 'App',
-
   components: {
     TopNav
   }

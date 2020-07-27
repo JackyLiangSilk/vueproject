@@ -45,6 +45,10 @@
 					{
 						route: '/about',
 						title: 'About'
+					},
+					{
+						route: '/gallery',
+						title: 'Gallery'
 					}
 				]
 			}
