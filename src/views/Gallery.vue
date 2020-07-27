@@ -1,10 +1,11 @@
 <template>
 	<div class="gallery">
 		<v-container>
-			<v-layout row>
-				<v-flex xs12 md6 lg4 pa-1 v-for="image in Gallery" v-bind:key="image.position">
-					<v-card class="pa-4 rounded-0">
-						{{image.title}}
+			<v-layout row align-stretch>
+				<v-flex xs12 md6 lg4 pa-4 v-for="image in Gallery" v-bind:key="image.id">
+					<v-card class="pa-4 rounded-0 align-stretch">
+						<img :src="image.thumbnailUrl" class="d-block mx-auto" />
+						<h3>{{image.title}}</h3>
 					</v-card>
 				</v-flex>
 			</v-layout>
@@ -18,88 +19,102 @@
 			return {
 				Gallery: [
 					{
-					"position": 1,
-					"photo_name": "Ash_Grey_Living_Room.jpg",
-					"title": "Ash Grey Living Room",
-					"walls_color": "Ash Grey"
+					"albumId": 1,
+					"id": 1,
+					"title": "accusamus beatae ad facilis cum similique qui sunt",
+					"url": "https://via.placeholder.com/600/92c952",
+					"thumbnailUrl": "https://via.placeholder.com/150/92c952"
 					},
 					{
-					"position": 2,
-					"photo_name": "Broccoli_Brown_Office.jpg",
-					"title": "Broccoli Brown Office",
-					"walls_color": "Brocolli Brown"
+					"albumId": 1,
+					"id": 2,
+					"title": "reprehenderit est deserunt velit ipsam",
+					"url": "https://via.placeholder.com/600/771796",
+					"thumbnailUrl": "https://via.placeholder.com/150/771796"
 					},
 					{
-					"position": 3,
-					"photo_name": "Crimson_Red_Brick_and_Bar.jpg",
-					"title": "Crimson Red Brick and Bar",
-					"walls_color": "Crimson Red"
+					"albumId": 1,
+					"id": 3,
+					"title": "officia porro iure quia iusto qui ipsa ut modi",
+					"url": "https://via.placeholder.com/600/24f355",
+					"thumbnailUrl": "https://via.placeholder.com/150/24f355"
 					},
 					{
-					"position": 4,
-					"photo_name": "Deep_Reddish_Brown_Living_Room.jpg",
-					"title": "Deep Reddish Brown Living Room",
-					"walls_color": "Deep Reddish Brown"
+					"albumId": 1,
+					"id": 4,
+					"title": "culpa odio esse rerum omnis laboriosam voluptate repudiandae",
+					"url": "https://via.placeholder.com/600/d32776",
+					"thumbnailUrl": "https://via.placeholder.com/150/d32776"
 					},
 					{
-					"position": 5,
-					"photo_name": "Duck_Green_Entryway.jpg",
-					"title": "Duck Green Entryway",
-					"walls_color": "Duck Green"
+					"albumId": 1,
+					"id": 5,
+					"title": "natus nisi omnis corporis facere molestiae rerum in",
+					"url": "https://via.placeholder.com/600/f66b97",
+					"thumbnailUrl": "https://via.placeholder.com/150/f66b97"
 					},
 					{
-					"position": 6,
-					"photo_name": "Dutch_Orange_Window_Seat.jpg",
-					"title": "Dutch Orange Window Seat",
-					"walls_color": "Dutch Orange"
+					"albumId": 1,
+					"id": 6,
+					"title": "accusamus ea aliquid et amet sequi nemo",
+					"url": "https://via.placeholder.com/600/56a8c2",
+					"thumbnailUrl": "https://via.placeholder.com/150/56a8c2"
 					},
 					{
-					"position": 7,
-					"photo_name": "Emerald_Green_Kitchen.jpg",
-					"title": "Emerald Green Kitchen",
-					"walls_color": "Emerald Green"
+					"albumId": 1,
+					"id": 7,
+					"title": "officia delectus consequatur vero aut veniam explicabo molestias",
+					"url": "https://via.placeholder.com/600/b0f7cc",
+					"thumbnailUrl": "https://via.placeholder.com/150/b0f7cc"
 					},
 					{
-					"position": 8,
-					"photo_name": "Imperial_Purple_Sitting_Room.jpg",
-					"title": "Imperial Purple Sitting Room",
-					"walls_color": "Imperial Purple"
+					"albumId": 1,
+					"id": 8,
+					"title": "aut porro officiis laborum odit ea laudantium corporis",
+					"url": "https://via.placeholder.com/600/54176f",
+					"thumbnailUrl": "https://via.placeholder.com/150/54176f"
 					},
 					{
-					"position": 9,
-					"photo_name": "Lake_Red_Living_Room.jpg",
-					"title": "Lake Red Living Room",
-					"walls_color": "Lake Red"
+					"albumId": 1,
+					"id": 9,
+					"title": "qui eius qui autem sed",
+					"url": "https://via.placeholder.com/600/51aa97",
+					"thumbnailUrl": "https://via.placeholder.com/150/51aa97"
 					},
 					{
-					"position": 10,
-					"photo_name": "Sap_Green_Dining_Area.jpg",
-					"title": "Sap Green Dining Area",
-					"walls_color": "Sap Green"
+					"albumId": 1,
+					"id": 10,
+					"title": "beatae et provident et ut vel",
+					"url": "https://via.placeholder.com/600/810b14",
+					"thumbnailUrl": "https://via.placeholder.com/150/810b14"
 					},
 					{
-					"position": 11,
-					"photo_name": "Scotch_Blue_Living_Room.jpg",
-					"title": "Scotch Blue Living Room",
-					"walls_color": "Scotch Blue"
+					"albumId": 1,
+					"id": 11,
+					"title": "nihil at amet non hic quia qui",
+					"url": "https://via.placeholder.com/600/1ee8a4",
+					"thumbnailUrl": "https://via.placeholder.com/150/1ee8a4"
 					},
 					{
-					"position": 12,
-					"photo_name": "Snow_White_Stairs.jpg",
-					"title": "Snow White Stairs",
-					"walls_color": "Snow White"
+					"albumId": 1,
+					"id": 12,
+					"title": "mollitia soluta ut rerum eos aliquam consequatur perspiciatis maiores",
+					"url": "https://via.placeholder.com/600/66b7d2",
+					"thumbnailUrl": "https://via.placeholder.com/150/66b7d2"
 					},
 					{
-					"position": 13,
-					"photo_name": "Ultra_Marine_Blue_Bedroom.jpg",
-					"title": "Ultra Marine Blue Bedroom",
-					"walls_color": "Ultra Marine Blue"
+					"albumId": 1,
+					"id": 13,
+					"title": "repudiandae iusto deleniti rerum",
+					"url": "https://via.placeholder.com/600/197d29",
+					"thumbnailUrl": "https://via.placeholder.com/150/197d29"
 					},
 					{
-					"position": 14,
-					"photo_name": "Verdigris_Green_Kids_Room.jpg",
-					"title": "Verdigris Green Kids Room",
-					"walls_color": "Verdigris Green"
+					"albumId": 1,
+					"id": 14,
+					"title": "est necessitatibus architecto ut laborum",
+					"url": "https://via.placeholder.com/600/61a65",
+					"thumbnailUrl": "https://via.placeholder.com/150/61a65"
 					}
 				]
 			}
