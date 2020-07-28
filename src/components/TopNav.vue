@@ -49,6 +49,14 @@
 					{
 						route: '/gallery',
 						title: 'Gallery'
+					},
+					{
+						route: '/tabs',
+						title: 'Tabs'
+					},
+					{
+						route: '/slider',
+						title: 'Slider'
 					}
 				]
 			}

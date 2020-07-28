@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Gallery from '../views/Gallery.vue'
+import Tabs from '../views/Tabs.vue'
+import Slider from '../views/Slider.vue'
 
 Vue.use(VueRouter)
 
@@ -26,6 +28,16 @@ export default new VueRouter({
         path: '/gallery',
         name: 'Gallery',
         component: Gallery
+      },
+      {
+        path: '/tabs',
+        name: 'Tabs',
+        component: Tabs
+      },
+      {
+        path: '/slider',
+        name: 'Slider',
+        component: Slider
       }
     ]
 }) 
