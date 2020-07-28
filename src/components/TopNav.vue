@@ -19,11 +19,10 @@
 			</div> -->
 			<v-list>
 				<v-list-item v-for="link in headerLinks" :key="link.route" router :to="link.route" >
-					<v-hover v-slot:default="{hover}" close-delay="200">
-						<v-list-item-content :class="{'on-hover' : hover}">
+						<v-list-item-content>
 							<v-list-item-title class="pa-4 d-block white--text text-decoration-none text-uppercase font-weight-bold">{{link.title}}</v-list-item-title>
 						</v-list-item-content>
-					</v-hover>
+					
 				</v-list-item>
 			</v-list>
 		</v-navigation-drawer>
