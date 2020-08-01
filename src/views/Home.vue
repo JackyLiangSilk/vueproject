@@ -90,6 +90,6 @@ import Tabs from '@/views/Tabs.vue';
 		position: absolute;
 		left: 0;
 		right: 0;
-		z-index: 10;
+		z-index: 4;
 	}
 </style>
