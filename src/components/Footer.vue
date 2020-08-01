@@ -1,5 +1,5 @@
 <template>
-	<v-footer dark class="pa-0" fixed>
+	<v-footer dark class="pa-0" >
 		<v-card class="flex" flat tile>
 			<v-card-title class="justify-center">
 				<strong class="text-uppercase">Vuetify practice - {{new Date().getFullYear()}}</strong>

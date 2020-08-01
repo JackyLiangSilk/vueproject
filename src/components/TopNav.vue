@@ -1,6 +1,7 @@
 <template>
 	<div>
-		<v-app-bar class="top-nav d-flex primary" 
+		<v-app-bar class="top-nav d-flex" 
+		color="primary"
 		app
 		dark 
 		fixed>
@@ -22,7 +23,6 @@
 						<v-list-item-content>
 							<v-list-item-title class="pa-4 d-block white--text text-decoration-none text-uppercase font-weight-bold">{{link.title}}</v-list-item-title>
 						</v-list-item-content>
-					
 				</v-list-item>
 			</v-list>
 		</v-navigation-drawer>

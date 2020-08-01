@@ -1,17 +1,25 @@
 <template>
-	<div class="tabs pa-4">
-		<v-card-title class="text-center justify-center pa-4">
+	<div class="tabs px-4 py-16 mx" >
+		<v-card-title class="text-center justify-center " >
 			<h1 class="font-weight-bold display-3">Tabs</h1>
 		</v-card-title>
-		<v-tabs v-model="tab" background-color="transparent" color="info" grow>
-			<v-tab v-for="item in items" :key="item.index">
+		<v-tabs 
+		v-model="tab" 
+		background-color="transparent" 
+		color="primary" 
+		grow 
+		show-arrows
+		>
+
+			<v-tabs-slider color="primary"></v-tabs-slider>
+			<v-tab v-for="item in items" :key="item.index" class="display-1 font-weight-bold">
 				{{item.title}}
 			</v-tab>
 		</v-tabs>
 		<v-tabs-items v-model="tab">
 			<v-tab-item v-for="item in items" :key="item.index">
 				<v-card flat>
-					<v-card-text>
+					<v-card-text class="headline">
 						{{item.description}} more info: <a :href="item.source">Wiki</a>
 					</v-card-text>
 				</v-card>
